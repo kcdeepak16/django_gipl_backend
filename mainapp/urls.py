@@ -12,7 +12,6 @@ urlpatterns = [
     path('about_us', views.about_us, name = "about_us"),
     path('inquiry', views.inquiry, name = "inquiry"),
     path('contact_us', views.contact_us, name = "contact_us"),
-    path('test',views.test, name = "test"),
     path('products/<str:name>', views.products_des, name = "products_des"),
 ]
 
