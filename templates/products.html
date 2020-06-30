@@ -1,0 +1,101 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block extra_links %}
+<link type="text/css" rel = "stylesheet" href = "{% static 'css/products.css' %}">
+{% endblock %}
+
+{% block begin_top %}
+<div id = "category_container">
+{% endblock %}
+
+{% block right_container %}
+<div id = "right_container">
+            <h2>CATEGORIES</h2>
+            <div id = "category_section">
+                    <button id = "leftscroll"> <img src= "{% static 'Images/arrhead.png' %}"></button>
+                    <ul id = "category_scroll">
+                        {% for c in categories_list %}
+                        <a onclick="show_products('{{ c.id }}')" class = "category"><li>
+                            <img src = "{{ c.picture.url }}">
+                            <div>
+                                <div class = "category_title">
+                                    <h3>{{ c.name }}</h3>
+                               </div>
+                            </div>
+                        </li></a>
+                        {% endfor %}
+                    </ul>
+                <button id = "rightscroll"><img src= "{% static 'Images/arrhead.png' %}"></button>
+                </div>
+            <div id = "products_section">
+            <div id = "products">
+                <h2>PRODUCTS</h2>
+                <ul>
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+{% endblock %}
+{% block html_scripts %}
+<script>
+$(document).ready(function(){
+            $("#leftscroll").click(function(){
+                $("#category_scroll").animate({scrollLeft: '-=600'}, 500, "swing");
+            });
+        });
+        $(document).ready(function(){
+            $("#rightscroll").click(function(){
+                $("#category_scroll").animate({scrollLeft: '+=600'}, 500, "swing");
+            });
+       });
+function show_products(this_id)
+{
+   $.ajax({
+            type: "GET",
+            url: "/products",
+            data: { 'value' :  this_id },
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            contentType: "application/json",
+            success: function(result){
+                    $("#products_section").css("display","block");
+                    var pl = result.products_list;
+                    var ul = document.querySelector("#products_section ul")
+                    ul.innerHTML = "";
+                    for(var i=0;i<pl.length;i++)
+                    {
+                        var a = document.createElement("a");
+                        a.href = "products/" + pl[i].name;
+                        a.style = "color: black";
+                        var li = document.createElement("li");
+                        li.className += "product";
+                        var im = document.createElement("img");
+                        im.src = "media/" + pl[i].picture;
+                        im.alt = "Image Not Available";
+                        var d = document.createElement("div");
+                        var p = document.createElement("p");
+                        p.className += "product_name";
+                        p.textContent = pl[i].name;
+                        var br = document.createElement("br");
+                        var span = document.createElement("span");
+                        span.textContent = pl[i].products_description;
+                        span.className += "product_des";
+                        li.appendChild(im);
+                        d.appendChild(p);
+                        d.appendChild(br);
+                        d.appendChild(span);
+                        li.appendChild(d);
+                        a.appendChild(li);
+                        ul.appendChild(a);
+                    }
+            },
+                        error: function(){
+                h2 = document.createElement("h2");
+                h2.textContent = "We're Sorry, an error occured while trying to render the products. Please refresh the page and try again.";
+                ul.appendChild(h2); 
+            }
+        });
+}
+</script>
+{% endblock %}

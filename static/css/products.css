@@ -1,0 +1,201 @@
+#right_container
+{
+    margin-top: 2rem;
+    width: 80%;
+    float: right;
+    margin-bottom: 1rem;
+}
+#category_section
+{
+    position: relative;
+    width: 100%;
+    height: 22rem;
+}
+#right_container h2
+{
+    font-family: heavy_font !important;
+    color: #4E4E4E;
+    text-align: center;
+    padding-bottom: .5rem;
+}
+#leftscroll, #rightscroll
+{
+    background: transparent;
+    height: 80%;
+    width: 3rem;
+    outline: none;
+    border: none;
+}
+#rightscroll
+{
+    float: right;
+}
+#leftscroll img, #rightscroll img
+{
+    cursor: pointer;
+    height: 15%;
+}
+#leftscroll img
+{
+    transform: rotate(180deg);
+}
+#category_scroll
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    height: 90%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+#category_scroll li
+{
+    cursor: pointer;
+    border: solid 1px black;
+    border-radius: 5px;
+    display: inline-block;
+    width: 10rem;
+    height: 80%;
+    margin: 1rem 2rem;
+    transition: .3s;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+#category_scroll li:hover {
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+  transform: scale(1.05,1.05);
+}
+#category_scroll li img
+{
+    height: 50%;
+    width: 100%;
+}
+#catrgory_scroll li div
+{
+    height: 50%;
+    width: 100%;
+}
+.category_title h3
+{
+    font-family: semibold_font !important;
+    text-align: center;
+}
+#products_section
+{
+    width: 100%;
+    display: none;
+}
+#products ul
+{
+    padding: 0;
+    text-align: center;
+}
+#products_section li
+{
+    display: inline-block;
+    height: 20rem;
+    width: 12rem;
+    background: transparent;
+    border: 1px solid transparent;
+    margin: 0 1.6rem;
+    margin-bottom: 4rem;;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    transition: .3s;
+    border-radius: 10px;
+    z-index: 10;
+}
+#products_section li:hover {
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+  transform: scale(1.05,1.05);
+}
+.product img
+{
+    width: 100%;
+    height: 50%;
+    border: none;
+    outline: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.product div
+{
+    height:50%;
+    background: transparent;
+}
+.product_name
+{
+    font-family: semibold_font !important;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    height: 10%;
+}
+.addtoq
+{
+    width: 60%;
+    height: 1.5rem;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    font-size: .7rem;
+    background: black;
+    font-family: mySecondFont;
+    color: white;
+    cursor: pointer;
+}
+.product_des
+{
+    font-family: regular_font !important;
+    font-size: .8rem;
+    opacity: .8;
+}
+#products_section h2
+{
+    font-family: heavy_font !important;
+    color: #4E4E4E;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+@media only screen and (max-width: 500px)
+{
+    html
+    {
+        font-size: 75%;
+    }
+    #left_sidebar
+    {
+        display: none;
+    }
+    #right_container
+    {
+        width: 100%;
+    }
+    #category_scroll
+    {
+        width: 100%;
+        margin: 0 .5rem;
+    }
+    #category_scroll li
+    {
+        margin: 1.5rem 1rem;
+    }
+    #leftscroll, #rightscroll
+    {
+        display: none;
+    }
+    #products_section li
+    {
+        margin: 1rem 0.5rem;
+    }
+}

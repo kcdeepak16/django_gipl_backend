@@ -1,0 +1,52 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block extra_links %}
+    <link type="text/css" rel = "stylesheet" href = "{% static 'css/inquiry.css' %}">
+{% endblock %}
+{% block right_container %}
+    <div id = "right_container">
+        <h1>Your Inquiry</h1>
+        <br>
+        <form action="{% url 'mainapp:inquiry' %}" method = "POST">
+            {% csrf_token %}
+            <div id = "info">
+                <label for = "name">NAME</label>
+                <br><br>
+                <input name = "name" id = "name" type="text">
+                <br><br>
+                <label for = "contact_no">PHONE NUMBER</label>
+                <br><br>
+                <input name = "contact_no" id = "contact_no" type = "text">
+                <br><br>
+                <label for = "email">EMAIL</label>
+                <br><br>
+                <input name = "email" id = "email" type="text">
+                <br><br>
+            </div>
+            <div id = "message_box">
+            <label for = "products_list">SELECT A PRODUCT</label>
+            <br><br>
+            <select id = "products_list">
+                {% for p in products %}
+                <option>{{ p }}</option>
+                {% endfor %}
+            </select>
+            <button id = "add_to_q" style = "margin-left: 1.2rem;">+ Add to Queries</button>
+            <br><br>
+            <label for = "message">EXPLAIN YOUR QUERY</label>
+            <br><br>
+            <textarea name = "message" id = "message" rows="15" cols="50"></textarea>
+            </div>
+            <br><br>
+            <input id = "submit_button" type="submit" value="SUBMIT">
+        </form>
+    </div>
+{% endblock %}
+{% block html_scripts %}
+<script>
+document.getElementById("add_to_q").addEventListener("click",function(){
+   event.preventDefault();
+   document.querySelector("textarea").value += document.getElementById("products_list").value + "\n\n";
+});
+</script>
+{% endblock %}

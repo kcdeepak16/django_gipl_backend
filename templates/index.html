@@ -1,0 +1,111 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block extra_links %}
+<meta name = "title" content= "Gitanshu Impex Private Limited. Exporter based in Kolkata, India">
+<link type="text/css" rel = "stylesheet" href = "{% static 'css/home.css' %}">
+{% endblock %}
+        {% block begin_top %}
+        <div id = "top_container">
+         {% endblock %}
+         {% block right_container %}
+            <div id = "img_container"><img src = "{% static 'Images/home_logo.png' %}"></div>
+        </div>
+        <div id = "about">
+            <ul>
+                <li class = "boxes shadow_boxes">
+                    <div class = "head"> <h2>WE DELIVER TO ALL CORNERS <br> OF THE WORLD</h2></div>
+                        <div class = "images_container">
+                            <div>
+                                <img>
+                                <img>
+                                <img>
+                                <img>
+                            </div>
+                    </div>
+                </li>
+                <li class = "boxes">
+                    <div class = "middle">
+                        <h2> WOULD YOU <br> LIKE TO BE OUR <br> PARTNERS? </h2>
+                        <div class = "images_container">
+                            <div>
+                                <img src = "{% static 'Images/partners.jpg'%}">
+                            </div>
+                    </div>
+                </li>
+                <li class = "large boxes" id = "special1"> 
+                    <div class = "middle">
+                        <h2>LIST YOUR PRODUCT WITH OUR <br> WORLD RENOWED ENTERPRISE <br> TO GET RECOGNIZED</h2>
+                        <div class = "images_container">
+                            <div>
+                                <img src = "{% static 'Images/list_your_product.jpg'%}">
+                            </div>
+                    </div>
+                </li>
+                <li class = "large boxes shadow_boxes">
+                    <div class = "head"> <h2> SOME OF OUR <br> MOST APPRAISED PRODUCTS </h2></div>
+                        <div class = "images_container">
+                            <div>
+                                <img>
+                                <img>
+                                <img>
+                                <img>
+                            </div>
+                        </div>
+                </li>
+                <li class = "small boxes shadow_boxes">
+                    <div class = "head"> <h2> SOME OF OUR <br> MOST APPRAISED PRODUCTS </h2></div>
+                        <div class = "images_container">
+                            <div>
+                                <img>
+                                <img>
+                                <img>
+                                <img>
+                            </div>
+                        </div>
+                </li>
+                <li class = "small boxes">
+                    <div class = "middle">
+                        <h2>LIST YOUR PRODUCT WITH OUR <br> WORLD RENOWED ENTERPRISE <br> TO GET RECOGNIZED
+                            <div class = "images_container">
+                            <div>
+                                <img style = "margin: 0 1rem 2rem 1rem;"src = "{% static 'Images/list_your_product.jpg'%}">
+                            </div>
+                        </h2>
+                    </div>
+                </li>
+                <li class = "boxes shadow_boxes" id = "special2">
+                    <div class = "head"> <h2>CONNECT WITH US ON</h2></div>
+                        <div class = "images_container">
+                            <div id = "contact_info">
+                               <ul>
+                                    <li style = "display: block;">
+                                        <img src = "{% static 'Images/whatsapp_icon.png' %}">
+                                        <span>8017586761</span>
+                                   </li> 
+                                   <li style = "display: block;">
+                                        <img src= "{% static 'Images/phone.png' %}">
+                                        <span>8017586761</span>
+                                   </li> 
+                                   <li style = "display: block;">
+                                        <img src = "{% static 'Images/gmail_icon.png' %}">
+                                        <span>gitanshuimpex@gmail.com</span>
+                                   </li> 
+                                   <li style = "display: block;">
+                                        <img src = "{% static 'Images/iconfinder_facebook_circle_color_107175.png' %}">
+                                        <span>Gitanshu Impex</span>
+                                   </li> 
+                               </ul>
+                            </div>
+                        </div>
+                </li>
+                <li class = "boxes" id = "special3">
+                    <div class = "middle"> <h2> WE ARE ALWAYS FREE <br> TO HEAR FROM YOU </h2>
+                        <div class = "images_container">
+                            <div>
+                                <img src = "{% static 'Images/contact-us.svg'%}">
+                            </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'navbar.html' %}
+{% block extra_links %}
+<style>
+h1
+{
+    font-family: heavy_font;
+    font-size: 3rem;
+    color: #4E4E4E;
+}
+h3
+{
+    font-family: semibold_font !important;
+    font-size: 2rem;
+    color: #4E4E4E;
+}
+p
+{
+    font-family: regular_font;
+    margin-left: 1rem;
+}
+#rest_container
+{
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+#right_container
+{
+    float: right;
+    width: 60%;
+    margin-right: 10rem;
+    margin-bottom: 1rem;
+}
+@media only screen and (max-width: 600px)
+{
+    #right_container
+    {
+        width: 80%;
+        margin-right: 5rem;
+    }
+}
+</style>
+{% endblock %}
+{% block right_container %}
+        <div id = "right_container">
+            <h1>ABOUT US</h1>
+            <p>
+                We are pleased to introduce ourselves as one of the Leading merchant exporters based in India. We specialise in a wide range of product categories to cater the evolving needs of our esteemed Customers. At KD Exports, we are committed to bringing you the best available products, along with the highest standards of Quality at optimum price. We always strive to build lasting business partnerships with our clients by offering the best value proposition for the trade. We do acknowledge the importance and essentiality of choosing the reliable supplier which requires attention and due diligence in the international market. At KD Exports, we recognize our responsibilities and trust bestowed by our clients when they select us as their suppliers; we make sure that we delight them each and every time with our Quality Products, Timely Delivery, Precise Communication & Professional Approach
+            </p>
+            <h3>Vision</h3>
+            <p>At KD Exports our vision is to be the Best Merchant Exporting Company most admired for its Products, People, Partnerships and Performance.</p>
+            <h3>Mission</h3>
+            <p>To engender and uphold Profitable Growth for the company and its stakeholders through value driven management of business processes with effective execution of the functional business strategies. To unlock the international market potential for the products manufactured locally. To exceed our customer’s expectations in quality, delivery, and cost through continuous improvement and customer interaction. To conduct business diligently with the highest ethical standards</p>
+        </div>
+{% endblock %}
