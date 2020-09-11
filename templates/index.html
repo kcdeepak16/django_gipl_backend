@@ -8,7 +8,12 @@
         <div id = "top_container">
          {% endblock %}
          {% block right_container %}
-            <div id = "img_container"><img src = "{% static 'Images/home_logo.png' %}"></div>
+            <div id = "img_container">
+                <!--<img src = "{% static 'Images/home_logo.png' %}">-->
+                <img  style = "display: block;" id = "cover1" src = "{% static 'Images/cover1.jpg' %}">
+                <img  style = "display: none;" id = "cover2" src = "{% static 'Images/cover2.jpg' %}">
+                <img style = "display: none;" id = "cover3" src = "{% static 'Images/cover3.jpg' %}">
+            </div>
         </div>
         <div id = "about">
             <ul>
@@ -29,6 +34,7 @@
                             <div>
                                 <img style = "width: 100%; height: auto;" src = "{% static 'Images/handshake.PNG' %}">
                             </div>
+                        </div>
                     </div>
                 </li>
                 <li class = "large boxes" id = "special1">
@@ -38,6 +44,7 @@
                             <div>
                                 <img style = "margin-top: 1rem;" src = "{% static 'Images/import_export.PNG'%}">
                             </div>
+                    </div>
                     </div>
                 </li>
                 <li class = "large boxes shadow_boxes">
@@ -72,6 +79,7 @@
                             <div class = "images_container">
                             <div>
                                 <img style = "margin: 1rem 1rem 2rem 1rem;"src = "{% static 'Images/import_export.PNG' %}">
+                            </div>
                             </div>
                         </h2>
                     </div>
@@ -108,7 +116,34 @@
                                 <img src = "{% static 'Images/contact-us.svg'%}">
                             </div>
                     </div>
+                    </div>
                 </li>
             </ul>
         </div>
+{% endblock %}
+{% block html_scripts %}
+ <script>
+            changeSlide();
+            var c = document.getElementById("img_container").childElementCount;
+            function changeSlide()
+            {
+                for(var i = 1; i <= c; i++)
+                {
+                    if(document.getElementById("cover" + i).style.display == "block")
+                    {
+                        document.getElementById("cover" + i).style.display = "none";
+                        if(i == c)
+                        {
+                            document.getElementById("cover1").style.display = "block";
+                        }
+                        else
+                        {
+                            document.getElementById("cover"+(parseInt(i)+1)).style.display = "block";
+                        }
+                        break;
+                    }
+                }
+                setTimeout(changeSlide, 3000);
+            }
+        </script>
 {% endblock %}

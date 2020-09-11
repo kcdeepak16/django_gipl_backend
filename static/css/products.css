@@ -74,7 +74,7 @@
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 #category_scroll li:hover {
-  box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0px 20px 25px rgba(0,0,0,0.2);
   transform: scale(1.05,1.05);
 }
 #category_scroll li img
