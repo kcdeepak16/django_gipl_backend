@@ -1,0 +1,195 @@
+ #rest_container
+{
+    margin-top: 3.5rem;
+}
+html
+{
+    font-size: 16px;
+}
+body
+{
+    font-family: heavy_font;
+    padding: 0;
+    margin: 0;
+}
+nav
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 90%;
+    margin: 0 auto;
+    height: 4rem;
+    -webkit-box-shadow: 0px 0px 62px 13px rgba(156, 156, 156, 0.56);
+          box-shadow: 0px 0px 62px 13px rgba(156, 156, 156, 0.56);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
+}
+#sidebar_button img
+{
+    height: 100%;
+    width: 100%;
+}
+#sidebar_button
+{
+    outline: none;
+    box-sizing: border-box;
+    background: white;
+    float: right;
+    height: 3rem;
+    border: none;
+    width: 3.5rem;
+}
+#sidebar_open button
+{
+    font-family: heavy_font;
+    height: 2.5rem;  
+    padding: 0;
+    color: #706E6C;
+    background: white;
+    padding-right: 2px; 
+    border:  none;
+    margin-left: 2rem !important;
+    float: right;
+    border: none;
+}
+#sidebar_open
+{
+    height: 3rem;
+    width: 100%;
+    color: #706E6C;
+    overflow-x: scroll;
+    padding: 0;
+    white-space: nowrap;
+    background: white;
+    border: solid .8rem white;
+    border-top: 0;
+    border-radius: 0 0 2rem 2rem;
+    display: none;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+#sidebar_open a
+{
+    padding: 0;
+    text-decoration: none;
+}
+.sidebar li
+{
+    display: inline-block;
+}
+#nav_content
+{
+    color: black;
+    width: 90%;
+    margin: 0 auto;
+}
+#nav_content ul
+{
+    float: right;
+    margin:0;
+    box-sizing: border-box;
+    height: 3rem;
+}
+.logo
+{
+    font-family: heavy_font !important;
+    box-sizing: border-box;
+    display: inline;
+    margin: auto 0;
+    line-height: 3.7rem;
+    float: left; 
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: italic;
+    position: absolute;
+}
+#nav_content li
+{
+    display: inline-block;
+    margin: auto 0;
+}
+.desktop button
+{
+    margin: .75rem .5rem; 
+    padding-left: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #706E6C;
+    outline: none;
+    font-size: 1rem;
+    padding: .5rem .5rem;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: inherit;
+    cursor: pointer;
+    background: linear-gradient(to right, #4E4E4E 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+.desktop button:hover
+{
+    border: 2px solid #4E4E4E;
+    color:white;
+    background-position: left bottom;
+}
+.desktop li button:focus
+{
+    outline: none;
+    border: none;
+}
+@media only screen and (max-width: 600px)
+{
+    html
+    {
+        font-size: 75%;
+    }
+    nav
+    {
+        width: 100%;
+    }
+    #nav_content
+    {
+        width: 100%;
+    }
+    .desktop
+    {
+        display: none;
+    }
+    .sidebar
+    {
+        display: block;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 1000px)
+{
+    .desktop
+    {
+        display: block;
+    }
+    html
+    {
+        font-size: 75%;
+    }
+    .sidebar
+    {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1000px)
+{
+    .desktop
+    {
+        display: block;
+    }
+   .sidebar
+    {
+        display: none;
+    } 
+}

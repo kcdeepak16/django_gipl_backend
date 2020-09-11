@@ -1,13 +1,13 @@
 #rest_container
 {
-    max-width: 1200px;
+    max-width: 1200px !important;
     margin: 0 auto;
     margin-top: 4rem;
 }
 #left_sidebar
 {
     font-family: semibold_font !important;
-    margin-top: 3rem;
+    margin-top: .5rem !important;
     width: 20%;
     float: left;
     margin-bottom: 1rem;
@@ -43,7 +43,7 @@
     list-style: none;
     display: none;
     padding: 1rem;
-    background: white; 
+    background: white;
 }
 .sidebar_product li
 {

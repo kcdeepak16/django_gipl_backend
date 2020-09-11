@@ -2,13 +2,13 @@
 #rest_container
 {
     margin: 0 auto;
-    margin-top: 5rem;
-    max-width: 1300px;
+    margin-top: 7rem;
+    max-width: 1200px;
 }
 #right_container
 {
     margin-left: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     width: 70%;
     float: right;
 }
@@ -97,10 +97,13 @@ select option
     }
     #right_container
     {
-        width: 100%;
+        width: 90%;
+        margin: 0 2rem;
     }
     form
     {
+        margin-left: 2rem;
+        width: 90%;
         position: static;
     }
     #info,#message_box, #submit_button

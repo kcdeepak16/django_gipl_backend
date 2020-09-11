@@ -2,7 +2,7 @@ from django.db import models
 
 class categories(models.Model):
     name = models.CharField(max_length = 50)
-    picture = models.ImageField(upload_to= "category_pictures", blank = True)
+    picture = models.ImageField(upload_to= "category_pictures", blank = False)
     class Meta:
         verbose_name_plural = "Category"
     def __str__(self):
@@ -11,9 +11,9 @@ class categories(models.Model):
 class products(models.Model):
 	category = models.ForeignKey(categories, on_delete = models.CASCADE, related_name='category')
 	name = models.CharField(max_length= 50)
-	picture = models.ImageField(upload_to = "products_pictures")
+	picture = models.ImageField(upload_to = "products_pictures", blank = False)
 	product_no = models.IntegerField(blank = True, default = 0)
-	products_description = models.TextField(max_length=80, blank = True)
+	products_description = models.TextField(max_length=80)
 	class Meta:
 		verbose_name_plural = "Products"
 	def __str__(self):

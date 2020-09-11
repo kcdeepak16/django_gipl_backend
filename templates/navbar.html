@@ -50,11 +50,12 @@
                             <a href = "{% url 'mainapp:inquiry' %}"><li><button id = "sbb_3" onClick = "sidebar_clicked(this.id)">QUERY</button></li></a>
                             <a><li><button id = "sbb_4" onClick = "sidebar_clicked(this.id)">WHY GIPL?</button></li></a>
                             <a href = "{% url 'mainapp:contact_us' %}"><li><button id = "sbb_5" onClick = "sidebar_clicked(this.id)">CONTACT US</button></li></a>
-                        </ul>       
+                        </ul>
                     </div>
                 </div>
-            
-            <div class = "logo"><a style = "text-decoration: none; color: black;" href = "{% url 'mainapp:home' %}">GIPL</a></div>
+
+            <div class = "logo"><a style = "text-decoration: none; color: #4E4E4E;" href = "{% url 'mainapp:home' %}"><img src = "{% static 'Images/ship2.PNG' %}">
+            <p>GIPL</p></a></div>
             <div class = "desktop">
                 <ul>
                     <a href = "{% url 'mainapp:about_us' %}"><li><button>ABOUT US</button></li></a>
@@ -78,7 +79,7 @@
                     <ul class = "sidebar_product" id = "sidebar_product{{ forloop.counter }}">
                         {% for p in c.1 %}
                         <li>
-                            {{ p.name }}
+                            <a style = "color: #4E4E4E;" href = "{{ request.scheme }}://{{ request.get_host }}/products/{{ p.name }}">{{ p.name }}</a>
                         </li>
                         {% endfor %}
                     </ul>
