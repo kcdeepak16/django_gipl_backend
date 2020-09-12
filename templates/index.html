@@ -125,29 +125,4 @@
         </div>
 {% endblock %}
 {% block html_scripts %}
-{% comment %} <script>
-            changeSlide();
-            var c = document.getElementById("img_container").childElementCount;
-            function changeSlide()
-            {
-                for(var i = 1; i <= c; i++)
-                {
-                    if(document.getElementById("cover" + i).style.display == "block")
-                    {
-                        document.getElementById("cover" + i).style.display = "none";
-                        if(i == c)
-                        {
-                            document.getElementById("cover1").style.display = "block";
-                        }
-                        else
-                        {
-                            document.getElementById("cover"+(parseInt(i)+1)).style.display = "block";
-                        }
-                        break;
-                    }
-                }
-                setTimeout(changeSlide, 3000);
-            }
-        </script>
-{% endcomment %}
 {% endblock %}
