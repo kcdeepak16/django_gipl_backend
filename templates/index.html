@@ -10,9 +10,12 @@
          {% block right_container %}
             <div id = "img_container">
                 <!--<img src = "{% static 'Images/home_logo.png' %}">-->
+                <figure>
                 <img  style = "display: block;" id = "cover1" src = "{% static 'Images/cover1.jpg' %}">
-                <img  style = "display: none;" id = "cover2" src = "{% static 'Images/cover2.jpg' %}">
-                <img style = "display: none;" id = "cover3" src = "{% static 'Images/cover3.jpg' %}">
+                <img  style = "display: block;" id = "cover2" src = "{% static 'Images/cover2.jpg' %}">
+                <img style = "display: block;" id = "cover3" src = "{% static 'Images/cover3.jpg' %}">
+                    <img  style = "display: block;" id = "cover4" src = "{% static 'Images/cover1.jpg' %}">
+                </figure>
             </div>
         </div>
         <div id = "about">
@@ -122,7 +125,7 @@
         </div>
 {% endblock %}
 {% block html_scripts %}
- <script>
+{% comment %} <script>
             changeSlide();
             var c = document.getElementById("img_container").childElementCount;
             function changeSlide()
@@ -146,4 +149,5 @@
                 setTimeout(changeSlide, 3000);
             }
         </script>
+{% endcomment %}
 {% endblock %}
