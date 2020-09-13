@@ -20,7 +20,7 @@
     padding: .5rem 0;
     width: 95%;
     padding-left: .7rem;
-    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-bottom: 1px solid #60BCAD;
 }
 .sidebar_categories div:hover, .sidebar_product li:hover
 {
@@ -34,13 +34,13 @@
 .sidebar_categories
 {
     cursor: pointer;
-    background: rgba(0,0,0,.03);
+    background: white;
     border-radius: 5px;
-    border-bottom: 1px solid rgba(0,0,0,.125);
+    border-bottom: 1px solid #60BCAD;
 }
 .sidebar_product
 {
-    list-style: none;
+    list-style:none;
     display: none;
     padding: 1rem;
     background: white;
@@ -48,6 +48,12 @@
 .sidebar_product li
 {
     padding: .5rem 0;
+}
+.sidebar_product li a
+{
+    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: #60BCAD
 }
 @media only screen and (max-width: 600px)
 {
