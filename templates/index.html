@@ -11,23 +11,24 @@
             <div id = "img_container">
                 <!--<img src = "{% static 'Images/home_logo.png' %}">-->
                 <figure>
-                <img  style = "display: block;" id = "cover1" src = "{% static 'Images/cover1.jpg' %}">
-                <img  style = "display: block;" id = "cover2" src = "{% static 'Images/cover2.jpg' %}">
-                <img style = "display: block;" id = "cover3" src = "{% static 'Images/cover3.jpg' %}">
-                    <img  style = "display: block;" id = "cover4" src = "{% static 'Images/cover1.jpg' %}">
+                <img  style = "display: block;" id = "cover1" src = "{% static 'Images/Slide1_Logo.png' %}">
+                <img  style = "display: block;" id = "cover2" src = "{% static 'Images/carousal-2.png' %}">
+                <img style = "display: block;" id = "cover3" src = "{% static 'Images/caraousal-3.jpg' %}">
+                    <img  style = "display: block;" id = "cover4" src = "{% static 'Images/Slide1_Logo.png' %}">
                 </figure>
             </div>
         </div>
         <div id = "about">
             <ul>
-                <li class = "boxes shadow_boxes">
-                    <div class = "head"> <h2>COUNTRIES WE CURRENTLY <br> SHIP TO</h2></div>
+                <li style = "background-color: rgba(216, 248, 228, 0.5);" class = "boxes shadow_boxes">
+                    <div class = "head"> <h2 style = "margin-bottom: 0;">COUNTRIES WE CURRENTLY <br> SHIP TO</h2></div>
                         <div class = "images_container">
-                            <div>
+                            <img style = "display: table; margin: 0 auto; width: 60%; height: auto;" src = "{% static 'Images/flags.png' %}">
+                            <!--<div>
                                 <img src = "{% static 'Images/srilanka.PNG' %}">
                                 <img src = "{% static 'Images/myanmar.PNG' %}">
                                 <img src = "{% static 'Images/india.PNG' %}">
-                            </div>
+                            </div>-->
                     </div>
                 </li>
                 <li class = "boxes">
@@ -50,28 +51,30 @@
                     </div>
                     </div>
                 </li>
-                <li class = "large boxes shadow_boxes">
+                <li style = "background-color: rgba(225, 160, 74, 0.4);" class = "large boxes shadow_boxes">
                     <div class = "head"> <h2> SOME OF OUR <br> MOST APPRAISED PRODUCTS </h2></div>
                         <div class = "images_container">
-                            <div style = "width: 70%; margin-top: 0; height: 17rem;">
+                            <img style = "display: table; margin: 0 auto; width: 50%; height: auto;" src = "{% static 'Images/Imp.png' %}">
+                            <!--<div style = "width: 70%; margin-top: 0; height: 17rem;">
                                 <img src = "{% static 'Images/aluminium.jpg' %}">
                                 <img src = "{% static 'Images/hinges(2).jpg' %}">
                                 <img src = "{% static 'Images/motors.jpg' %}">
                                 <img src = "{% static 'Images/hinges(1).jpg' %}">
-                            </div>
+                            </div>-->
                             <a href = "{% url 'mainapp:products' %}"style = "cursor: pointer;"
                                ><span style = "display: table; color: #4e4e4e; opacity: .8; float: right; margin-right: 2rem;">Show All Products ></span></a>
                         </div>
                 </li>
-                <li class = "small boxes shadow_boxes">
+                <li style = "background-color: rgba(225, 160, 74, 0.4);" class = "small boxes shadow_boxes">
                     <div class = "head"> <h2> SOME OF OUR <br> MOST APPRAISED PRODUCTS </h2></div>
                         <div class = "images_container">
-                            <div style = "width: 75%; margin-top: 0; height: 17rem;">
+                            <img style = "display: table; margin: 0 auto; width: 70%; height: auto;" src = "{% static 'Images/Imp.png' %}">
+                            <!--<div style = "width: 75%; margin-top: 0; height: 17rem;">
                                 <img src = "{% static 'Images/aluminium.jpg' %}">
                                 <img src = "{% static 'Images/hinges(2).jpg' %}">
                                 <img src = "{% static 'Images/motors.jpg' %}">
                                 <img src = "{% static 'Images/hinges(1).jpg' %}">
-                            </div>
+                            </div>-->
                             <a href = "{% url 'mainapp:products' %}" style = "cursor: pointer;"
                                ><span style = "display: table; color: #4e4e4e; opacity: .8; float: right; margin-right: 2rem;">Show All Products ></span></a>
                         </div>
@@ -87,18 +90,18 @@
                         </h2>
                     </div>
                 </li>
-                <li class = "boxes shadow_boxes" id = "special2">
+                <li style = "background-color: rgba(249, 75, 54, 0.2);" class = "boxes shadow_boxes" id = "special2">
                     <div class = "head"> <h2>CONNECT WITH US ON</h2></div>
                         <div class = "images_container">
                             <div id = "contact_info">
                                <ul>
                                     <li style = "display: block;">
                                         <img src = "{% static 'Images/whatsapp_icon.png' %}">
-                                        <span>8017586761</span>
+                                        <span>8335969429</span>
                                    </li>
                                    <li style = "display: block;">
-                                        <img src= "{% static 'Images/phone.png' %}">
-                                        <span>8017586761</span>
+                                        <img style = "width: 2.5rem; height: auto;" src= "{% static 'Images/phone.png' %}">
+                                        <span>+91 83359 69429</span>
                                    </li>
                                    <li style = "display: block;">
                                         <img src = "{% static 'Images/gmail_icon.png' %}">
