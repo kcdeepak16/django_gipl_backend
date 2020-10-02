@@ -79,7 +79,7 @@
                     <ul class = "sidebar_product" id = "sidebar_product{{ forloop.counter }}">
                         {% for p in c.1 %}
                         <li>
-                            <a style = "color: #4E4E4E;" href = "{{ request.scheme }}://{{ request.get_host }}/products/{{ p.name }}">{{ p.name }}</a>
+                            <a style = "color: black;" href = "{{ request.scheme }}://{{ request.get_host }}/products/{{ p.name }}">{{ p.name }}</a>
                         </li>
                         {% endfor %}
                     </ul>

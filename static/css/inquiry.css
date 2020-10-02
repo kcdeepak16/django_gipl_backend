@@ -71,10 +71,13 @@ select option
     left: 30%;
     background-color: black;
     color: white;
-    height: 2rem;
-    width: 7rem;
+    height: 2.5rem;
+    width: 9rem;
     border: none;
+    font-size:1.2rem;
+    border-radius: 25px;
     cursor: pointer;
+    font-family: heavy_font;
 }
 #message_box
 {
