@@ -14,8 +14,8 @@
 #image_slider
 {
     display: inline-block;
-    width: 35%;
-    height: 15rem;
+    width: 50%;
+    height: 20rem;
     float: left;
     margin-left: 2rem;
 }
@@ -57,7 +57,8 @@
 #product_info
 {
     display: inline-block;
-    width: 60%;
+    margin-top: 5rem;
+    width: 45%;
     height: 15rem;
     float: right;
 }

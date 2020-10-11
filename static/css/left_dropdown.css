@@ -30,13 +30,30 @@
 {
     list-style: none;
     padding: 0;
+    text-decoration: none !important;
 }
 .sidebar_categories
 {
     cursor: pointer;
-    background: white;
-    border-radius: 5px;
     border-bottom: 1px solid #60BCAD;
+    background-color: inherit;
+}
+.sidebar_categories:hover
+{
+    background: rgb(96, 188, 173, .5);
+}
+#category_name:hover
+{
+    outline: none;
+    border: none;
+}
+.sidecat:hover
+{
+    text-decoration: none !important;
+}
+.sidebar_categories:hover
+{
+    background-position: bottom;
 }
 .sidebar_product
 {

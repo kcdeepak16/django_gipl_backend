@@ -14,13 +14,12 @@ class categories(models.Model):
     def __str__(self):
         return self.name
 
-
 class products(models.Model):
     category = models.ForeignKey(categories, on_delete=models.CASCADE, related_name='category')
     name = models.CharField(max_length=50)
     picture = models.ImageField(upload_to="products_pictures", blank=False)
     product_no = models.IntegerField(blank=True, default=0)
-    products_description = models.TextField(max_length=80)
+    products_description = models.TextField(max_length=3000)
 
     def get_absolute_url(self):
         return f'/products/{self.name}'
@@ -31,6 +30,9 @@ class products(models.Model):
     def __str__(self):
         return self.name
 
+class product_pictures(models.Model):
+    picture = models.ImageField(upload_to = "product_pictures")
+    product = models.ForeignKey(products, on_delete = models.CASCADE)
 
 class query(models.Model):
     name = models.CharField(max_length=50)

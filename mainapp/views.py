@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import categories, products, query
+from .models import categories, products, query, product_pictures
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
@@ -45,5 +45,6 @@ def inquiry(request):
 
 def products_des(request, name):
 	products_info = products.objects.get(name= name)
-	print(products_info)
-	return render(request, 'product_des.html', {'products_info' : products_info})
+	productpics = product_pictures.objects.filter(product = products_info.id)
+	npics = len(productpics)
+	return render(request, 'product_des.html', {'products_info' : products_info,'productspics':productpics,'npics':npics+1})

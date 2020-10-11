@@ -9,9 +9,9 @@
                 <img id = "left_slide" src = "{% static 'Images/arrhead.png' %}">
                 <img id = "right_slide" src = "{% static 'Images/arrhead.png' %}">
                 <div id = "image_container">
-                    <img src = "{{ products_info.picture.url }}">
+                    <img id = "current_pic"src = "{{ products_info.picture.url }}">
                 </div>  
-                <p id = "counter">1/9</p>
+                <p id = "counter">1/{{npics}}</p>
             </div> 
             <div id = "product_info">
                 <h1>{{ products_info.name }}</h1>
@@ -19,26 +19,28 @@
                 <h3>PRODUCT ID - {{ products_info.product_no }}</h3>
             </div>
             <div id = "product_description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc convallis ipsum ac nisi pretium, et hendrerit ante pulvinar. Nam egestas, mauris vel aliquam vulputate, libero quam rutrum dui, at blandit est neque id nunc. Sed sit amet lorem libero. Aliquam consequat ultricies sem, et viverra eros scelerisque sed. Aliquam mattis nisi non dui sodales, interdum egestas nibh eleifend. Aenean vel quam quis nisi lacinia congue nec id erat. Praesent tincidunt porta nisl. Nulla nec facilisis turpis. Sed condimentum nulla vitae vulputate iaculis. Nulla tellus purus, tempor nec eros in, efficitur sollicitudin sapien. Aliquam ac pulvinar ligula.
-                <br>
-                <br>
-Integer mollis in odio sit amet cursus. Donec at fringilla massa. Fusce et purus sit amet augue maximus finibus. Cras posuere vestibulum neque vel maximus. Curabitur vitae dolor rhoncus orci tincidunt rutrum. Maecenas condimentum pulvinar lectus vitae ullamcorper. Donec rutrum massa justo, quis iaculis orci euismod accumsan. Fusce eu lorem ac nunc vestibulum volutpat.
+                {{products_info.products_description}}
                 
             </div>
         </div>
 {% endblock %}
 {% block html_scripts %}
 <script>
+    var ppics = ["{{ products_info.picture.url }}"];
+    {% for pics in productspics %}
+    ppics.push("{{pics.picture.url}}");
+    {% endfor %}
     var im = document.querySelector("#image_container img");  
     $("#right_slide").click(function(){
         var s = $("#counter").text();
         var n = parseInt(s[0],10);
-        if (n != 9)
+        if (n != parseInt("{{npics}}",10))
         {
             ++n;
             console.log(n);
-            $("#counter").text(n + "/9");
+            $("#counter").text(n + "/{{npics}}");
         }
+        document.getElementById("current_pic").src = ppics[n-1];
     });
     $("#left_slide").click(function(){
         var s = $("#counter").text();
@@ -47,8 +49,9 @@ Integer mollis in odio sit amet cursus. Donec at fringilla massa. Fusce et purus
         {
             --n;
             console.log(n);
-            $("#counter").text(n + "/9");
+            $("#counter").text(n + "/{{npics}}");
         }
+        document.getElementById("current_pic").src = ppics[n-1];
     });
 </script>
 {% endblock %}
