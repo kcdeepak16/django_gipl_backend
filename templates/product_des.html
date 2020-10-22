@@ -10,9 +10,9 @@
                 <img id = "right_slide" src = "{% static 'Images/arrhead.png' %}">
                 <div id = "image_container">
                     <img id = "current_pic"src = "{{ products_info.picture.url }}">
-                </div>  
+                </div>
                 <p id = "counter">1/{{npics}}</p>
-            </div> 
+            </div>
             <div id = "product_info">
                 <h1>{{ products_info.name }}</h1>
                 <br>
@@ -20,8 +20,9 @@
             </div>
             <div id = "product_description">
                 {{products_info.products_description}}
-                
+                <h1 style="margin: 2rem 0 2rem 0; font-size: 8px;">Gitanshu Impex Private Limited</h1>
             </div>
+
         </div>
 {% endblock %}
 {% block html_scripts %}
@@ -30,7 +31,7 @@
     {% for pics in productspics %}
     ppics.push("{{pics.picture.url}}");
     {% endfor %}
-    var im = document.querySelector("#image_container img");  
+    var im = document.querySelector("#image_container img");
     $("#right_slide").click(function(){
         var s = $("#counter").text();
         var n = parseInt(s[0],10);
