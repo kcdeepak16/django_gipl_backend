@@ -2,6 +2,8 @@
 {% load static %}
 {% block extra_links %}
 <meta name = "title" content= "Gitanshu Impex Private Limited. Exporter based in Kolkata, India">
+<meta name="description" content="We, Gitanshu Impex Private Limited, Merchant Exporters based at Kolkata, India . Gitanshu Impex exports directly from manufacturers across India. Gitanshu Impex">
+
 <link type="text/css" rel = "stylesheet" href = "{% static 'css/home.css' %}">
 {% endblock %}
         {% block begin_top %}
@@ -11,23 +13,24 @@
             <div id = "img_container">
                 <!--<img src = "{% static 'Images/home_logo.png' %}">-->
                 <figure>
-                <img  style = "display: block;" id = "cover1" src = "{% static 'Images/Slide1_Logo.png' %}">
-                <img  style = "display: block;" id = "cover2" src = "{% static 'Images/carousal-2.png' %}">
-                <img style = "display: block;" id = "cover3" src = "{% static 'Images/caraousal-3.jpg' %}">
-                    <img  style = "display: block;" id = "cover4" src = "{% static 'Images/Slide1_Logo.png' %}">
+                <img  style = "display: block;" id = "cover1" src = "{% static 'Images/Slide1_Logo.png' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                <img  style = "display: block;" id = "cover2" src = "{% static 'Images/carousal-2.png' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                <img style = "display: block;" id = "cover3" src = "{% static 'Images/caraousal-3.jpg' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                    <img  style = "display: block;" id = "cover4" src = "{% static 'Images/Slide1_Logo.png' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                 </figure>
             </div>
         </div>
+        <h1 style="text-align: center; margin : 2rem 0 4rem 0; font-size : 2rem; color : rgb(78,78,78);"><strong>Gitanshu Impex Private Limited</strong></h1>
         <div id = "about">
             <ul>
                 <li style = "background-color: rgba(216, 248, 228, 0.5);" class = "boxes shadow_boxes">
                     <div class = "head"> <h2 style = "margin-bottom: 0;">COUNTRIES WE CURRENTLY <br> SHIP TO</h2></div>
                         <div class = "images_container">
-                            <img style = "display: table; margin: 0 auto; width: 60%; height: auto;" src = "{% static 'Images/flags.png' %}">
+                            <img style = "display: table; margin: 0 auto; width: 60%; height: auto;" src = "{% static 'Images/flags.png' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                             <!--<div>
-                                <img src = "{% static 'Images/srilanka.PNG' %}">
-                                <img src = "{% static 'Images/myanmar.PNG' %}">
-                                <img src = "{% static 'Images/india.PNG' %}">
+                                <img src = "{% static 'Images/srilanka.PNG' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                                <img src = "{% static 'Images/myanmar.PNG' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                                <img src = "{% static 'Images/india.PNG' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                             </div>-->
                     </div>
                 </li>
@@ -36,7 +39,7 @@
                         <h2>.</h2>
                         <div class = "images_container">
                             <div>
-                                <img id = "bad_code" style = "width: 90%; height: auto; margin-top: -5rem;" src = "{% static 'Images/handshake1.png' %}">
+                                <img id = "bad_code" style = "width: 90%; height: auto; margin-top: -5rem;" src = "{% static 'Images/handshake1.png' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                             </div>
                         </div>
                     </div>
@@ -46,7 +49,7 @@
                         <h2>.</h2>
                         <div class = "images_container">
                             <div>
-                                <img style = "z-index: 100; width: 80%; height: auto; margin-top: -4rem;" src = "{% static 'Images/import_export.PNG'%}">
+                                <img style = "z-index: 100; width: 80%; height: auto; margin-top: -4rem;" src = "{% static 'Images/import_export.PNG'%}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                             </div>
                     </div>
                     </div>
@@ -54,12 +57,12 @@
                 <li style = "background-color: rgba(225, 160, 74, 0.4);" class = "large boxes shadow_boxes">
                     <div class = "head"> <h2> SOME OF OUR <br> MOST APPRAISED PRODUCTS </h2></div>
                         <div class = "images_container">
-                            <img style = "display: table; margin: 0 auto; width: 50%; height: auto;" src = "{% static 'Images/Imp.png' %}">
+                            <img style = "display: table; margin: 0 auto; width: 50%; height: auto;" src = "{% static 'Images/Imp.png' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                             <!--<div style = "width: 70%; margin-top: 0; height: 17rem;">
-                                <img src = "{% static 'Images/aluminium.jpg' %}">
-                                <img src = "{% static 'Images/hinges(2).jpg' %}">
-                                <img src = "{% static 'Images/motors.jpg' %}">
-                                <img src = "{% static 'Images/hinges(1).jpg' %}">
+                                <img src = "{% static 'Images/aluminium.jpg' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                                <img src = "{% static 'Images/hinges(2).jpg' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                                <img src = "{% static 'Images/motors.jpg' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
+                                <img src = "{% static 'Images/hinges(1).jpg' %}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                             </div>-->
                             <a href = "{% url 'mainapp:products' %}"style = "cursor: pointer;"
                                ><span style = "display: table; color: #4e4e4e; opacity: .8; float: right; margin-right: 2rem;">Show All Products ></span></a>
@@ -68,7 +71,7 @@
                 <li style = "background-color: rgba(225, 160, 74, 0.4);" class = "small boxes shadow_boxes">
                     <div class = "head"> <h2> SOME OF OUR <br> MOST APPRAISED PRODUCTS </h2></div>
                         <div class = "images_container">
-                            <img style = "display: table; margin: 0 auto; width: 70%; height: auto;" src = "{% static 'Images/Imp.png' %}">
+                            <img style = "display: table; margin: 0 auto; width: 70%; height: auto;" src = "{% static 'Images/Imp.png' %}" alt="gitanshu impex private limited">
                             <!--<div style = "width: 75%; margin-top: 0; height: 17rem;">
                                 <img src = "{% static 'Images/aluminium.jpg' %}">
                                 <img src = "{% static 'Images/hinges(2).jpg' %}">
@@ -84,7 +87,7 @@
                         <h2>.
                             <div class = "images_container">
                             <div>
-                                <img style = "margin: 1rem 1rem 2rem 1rem;"src = "{% static 'Images/import_export.PNG' %}">
+                                <img style = "margin: 1rem 1rem 2rem 1rem;"src = "{% static 'Images/import_export.PNG' %}" alt="gitanshu impex private limited">
                             </div>
                             </div>
                         </h2>
@@ -96,20 +99,20 @@
                             <div id = "contact_info">
                                <ul>
                                     <li style = "display: block;">
-                                        <img src = "{% static 'Images/whatsapp_icon.png' %}">
+                                        <img src = "{% static 'Images/whatsapp_icon.png' %}" alt="gitanshu impex private limited">
                                         <span>8335969429</span>
                                    </li>
                                    <li style = "display: block;">
-                                        <img style = "width: 2.5rem; height: auto;" src= "{% static 'Images/phone.png' %}">
+                                        <img style = "width: 2.5rem; height: auto;" src= "{% static 'Images/phone.png' %}" alt="gitanshu impex private limited">
                                         <span>+91 83359 69429</span>
                                    </li>
                                    <li style = "display: block;">
-                                        <img src = "{% static 'Images/gmail_icon.png' %}">
+                                        <img src = "{% static 'Images/gmail_icon.png' %}" alt="gitanshu impex private limited">
                                         <span>gitanshuimpex@gmail.com</span>
                                    </li>
                                    <li style = "display: block;">
-                                        <img src = "{% static 'Images/iconfinder_facebook_circle_color_107175.png' %}">
-                                        <span>Gitanshu Impex</span>
+                                        <img src = "{% static 'Images/iconfinder_facebook_circle_color_107175.png' %}" alt="gitanshu impex private limited">
+                                        <span><bold>Gitanshu Impex</bold></span>
                                    </li>
                                </ul>
                             </div>
@@ -119,7 +122,7 @@
                     <div class = "middle"> <h2> WE ARE ALWAYS FREE <br> TO HEAR FROM YOU </h2>
                         <div class = "images_container">
                             <div>
-                                <img src = "{% static 'Images/contact-us.svg'%}">
+                                <img src = "{% static 'Images/contact-us.svg'%}" alt="gitanshu impex private limited" title="gitanshu impex private limited">
                             </div>
                     </div>
                     </div>

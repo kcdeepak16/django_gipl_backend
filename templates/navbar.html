@@ -30,6 +30,7 @@
             font-weight: 700;
         }
     </style>
+    <link rel='icon' href="{% static 'Images/home_logo.png' %}" type='image/png'>
     <link type="text/css" rel = "stylesheet" href = "{% static 'css/navbar.css' %}">
     <link type="text/css" rel = "stylesheet" href = "{% static 'css/left_dropdown.css' %}">
     {% block extra_links %}
@@ -54,7 +55,7 @@
                     </div>
                 </div>
 
-            <div class = "logo"><a style = "text-decoration: none; color: #4E4E4E;" href = "{% url 'mainapp:home' %}"><img src = "{% static 'Images/home_logo.PNG' %}">
+            <div class = "logo"><a style = "text-decoration: none; color: #4E4E4E;" href = "{% url 'mainapp:home' %}"><img src = "{% static 'Images/home_logo.png' %}">
             </a></div>
             <div class = "desktop">
                 <ul>
