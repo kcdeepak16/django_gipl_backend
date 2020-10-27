@@ -16,7 +16,7 @@
             <div id = "product_info">
                 <h1>{{ products_info.name }}</h1>
                 <br>
-                <h3>PRODUCT ID - {{ products_info.product_no }}</h3>
+                <h3>PRODUCT ID - {{ products_info.product_no|linebreaks }}</h3>
             </div>
             <div id = "product_description">
                 {{products_info.products_description}}
