@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 db.splite3
 *.pyc
+=======
+db.sqlite3
+>>>>>>> 7b252ca7599c8a3a0913b9ba7478df9a13e31f2e

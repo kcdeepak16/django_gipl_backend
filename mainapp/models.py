@@ -19,7 +19,11 @@ class products(models.Model):
     name = models.CharField(max_length=50)
     picture = models.ImageField(upload_to="products_pictures", blank=False)
     product_no = models.IntegerField(blank=True, default=0)
+<<<<<<< HEAD
     summary = models.TextField()
+=======
+    summary = models.TextField(max_length=100, default= "summary")
+>>>>>>> 7b252ca7599c8a3a0913b9ba7478df9a13e31f2e
     products_description = models.TextField(max_length=3000)
 
     def get_absolute_url(self):
