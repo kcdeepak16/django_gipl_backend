@@ -16,10 +16,10 @@
             <div id = "product_info">
                 <h1>{{ products_info.name }}</h1>
                 <br>
-                <h3>PRODUCT ID - {{ products_info.product_no|linebreaks }}</h3>
+                <h3>PRODUCT ID - {{ products_info.product_no  }}</h3>
             </div>
             <div id = "product_description">
-                {{products_info.products_description}}
+                {{ products_info.products_description|linebreaks }}
                 <h1 style="margin: 2rem 0 2rem 0; font-size: 8px;">Gitanshu Impex Private Limited</h1>
             </div>
 

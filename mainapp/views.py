@@ -17,7 +17,7 @@ def home(request):
 def productspage(request):
 	if request.is_ajax():
 		cat_id = int(request.GET['value'])
-		products_list = list(products.objects.filter(category = cat_id).values("id","name","picture","products_description"))
+		products_list = list(products.objects.filter(category = cat_id).values("id","summary","name","picture","products_description"))
 		print(products_list)
 		return JsonResponse({'products_list' : products_list})
 	categories_list = categories.objects.all()
