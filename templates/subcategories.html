@@ -1,0 +1,34 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block extra_links %}
+<link type="text/css" rel = "stylesheet" href = "{% static 'css/subcategories.css' %}">
+{% endblock %}
+
+{% block right_container %}
+<div id = "right_container">
+	<div id = "products_section">
+        <div id = "products">
+            <h2>{{subcategory}}</h2>
+            <ul>
+            	{% for subcat in subcategories %}
+            	<a style = "color:black;" href = "{% url 'mainapp:products_des' sub_category=subcategory name=subcat.name %}">
+            		<li class = "product">
+            			<img src = "{{ subcat.picture.url }}">
+            			<div>
+            				<p class = "product_name">
+            					{{ subcat.name }}
+            				</p>
+            				<br>
+            				<span class = "prodict_des">
+            					{{ subcat.summary }}
+            				</span>
+            			</div>
+            		</li>
+            	</a>
+            	{% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

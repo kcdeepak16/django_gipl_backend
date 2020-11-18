@@ -12,7 +12,9 @@ urlpatterns = [
     path('about_us', views.about_us, name = "about_us"),
     path('inquiry', views.inquiry, name = "inquiry"),
     path('contact_us', views.contact_us, name = "contact_us"),
-    path('products/<str:name>', views.products_des, name = "products_des"),
+    path('products/<str:name>', views.sub_category, name = "subcategory"),
+    path('products/<str:sub_category>/<str:name>', views.products_des, name = "products_des"),
+    path('test/<str:name>/<str:name2>', views.test, name = "test")
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
